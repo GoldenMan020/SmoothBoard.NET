@@ -1,16 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using SmoothBoard.NET.Context;
+using SmoothBoard.NET.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllersWithViews();
 // Service for DB Connection 
 builder.Services.AddDbContext<ConnectDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+    );
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 

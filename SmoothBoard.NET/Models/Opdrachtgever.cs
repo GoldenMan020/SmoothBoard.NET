@@ -12,9 +12,11 @@
 
         public string email { get; set; }
 
-        public DateOnly brengDatum { get; set; }
+        public DateTime brengDatum { get; set; }
 
 
 
     }
+
+    
 }

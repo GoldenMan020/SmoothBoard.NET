@@ -7,7 +7,7 @@ namespace SmoothBoard.NET.Context
     public class ConnectDbContext : DbContext
     {
         // constractor aanmaken
-        public ConnectDbContext(DbContextOptions<ConnectDbContext> contextOptions) : base(contextOptions)
+        public ConnectDbContext(DbContextOptions contextOptions) : base(contextOptions)
         {
 
         }
