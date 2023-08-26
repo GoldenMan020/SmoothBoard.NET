@@ -37,7 +37,12 @@ namespace SmoothBoard.NET.Models
         [Required(ErrorMessage = "Breedte moet tussen 65 en 85 liggen.")]
         [Range(65, 85, ErrorMessage = "Breedte moet tussen 65 en 85 liggen.")]
         public int Breedte { get; set; }
+
+        [Required(ErrorMessage = "Foto is verplicht.")]
+        [Display(Name = "Foto")]
+        public string Foto { get; set; } // Dit kan het pad of de bestandsnaam van de geüploade foto zijn
+
     }
 
-    
+
 }
