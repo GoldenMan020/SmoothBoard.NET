@@ -1,0 +1,67 @@
+﻿@model SmoothBoard.NET.Models.Opdrachtgever
+
+@{
+    ViewData["Title"] = "Bestelling Aanmaken";
+}
+
+<h2>Bestelling Aanmaken</h2>
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert alert-success">@ViewBag.SuccessMessage</div>
+}
+
+        <!-- Begin vam het formulier -->
+<form asp-controller="Order" asp-action="Creëer" method="post">
+    <div class="form-group">
+        <label asp-for="Naam"></label>
+        <input asp-for="Naam" class="form-control" />
+        <span asp-validation-for="Naam" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Adres"></label>
+        <input asp-for="Adres" class="form-control" />
+        <span asp-validation-for="Adres" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Telefoonnummer"></label>
+        <input asp-for="Telefoonnummer" class="form-control" />
+        <span asp-validation-for="Telefoonnummer" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BrengDatum"></label>
+        <input asp-for="BrengDatum" class="form-control" />
+        <span asp-validation-for="BrengDatum" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="OphaalDatum"></label>
+        <input asp-for="OphaalDatum" class="form-control" />
+        <span asp-validation-for="OphaalDatum" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Lengte"></label>
+        <input asp-for="Lengte" class="form-control" />
+        <span asp-validation-for="Lengte" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Breedte"></label>
+        <input asp-for="Breedte" class="form-control" />
+        <span asp-validation-for="Breedte" class="text-danger"></span>
+    </div>
+    <br />
+    <!-- Einde van het formulier -->
+
+    <button type="submit" class="btn btn-primary">Bestelling Aanmaken</button>
+</form>

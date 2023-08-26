@@ -5,19 +5,18 @@ namespace SmoothBoard.NET.Controllers
 {
     public class OrderController : Controller
     {
-        public IActionResult Creëer()
+        public IActionResult Creeer()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Creëer(OrderModel order)
+        public IActionResult Creeer(Opdrachtgever order)
         {
             if (ModelState.IsValid)
             {
                 ViewBag.SuccessMessage = "Bestelling succesvol aangemaakt!";
             }
-
             return View(order);
         }
     }

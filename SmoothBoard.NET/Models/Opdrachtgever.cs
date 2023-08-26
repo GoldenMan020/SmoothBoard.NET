@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace SmoothBoard.NET.Models
 {
     public class Opdrachtgever

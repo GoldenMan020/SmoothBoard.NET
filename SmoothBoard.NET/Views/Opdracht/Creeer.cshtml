@@ -1,0 +1,24 @@
+﻿@model SmoothBoard.NET.Models.Opdrachtgever
+
+@{
+    ViewData["Title"] = "Creëer Bestelling";
+}
+
+<h2>Creëer Bestelling</h2>
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert alert-success">@ViewBag.SuccessMessage</div>
+}
+
+<form asp-controller="Order" asp-action="Creeer" method="post">
+    <div class="form-group">
+        <label asp-for="Naam"></label>
+        <input asp-for="Naam" class="form-control" />
+        <span asp-validation-for="Naam" class="text-danger"></span>
+    </div>
+
+    <!-- Herhaal vergelijkbare formuliergroepen voor andere velden -->
+
+    <button type="submit" class="btn btn-primary">Bestelling Aanmaken</button>
+</form>
